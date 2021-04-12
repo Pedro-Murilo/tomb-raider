@@ -1,0 +1,92 @@
+.bg {
+  overflow: hidden;
+  position: relative;
+  @include widthHeight;
+}
+
+.bg-loader {
+  z-index: 999;
+  @include slides;
+}
+
+.bg-loader-2 {
+  z-index: 998;
+  @include slides;
+}
+
+.bg-loader-3 {
+  z-index: 997;
+  @include slides;
+}
+
+.bg-loader-4 {
+  z-index: 996;
+  @include slides;
+}
+
+.bg-loader-5 {
+  z-index: 995;
+  @include slides;
+}
+
+.bg-loader-6 {
+  z-index: 994;
+  @include slides;
+}
+
+.slide img {
+  @include widthHeight;
+}
+
+.slider-content {
+  position: absolute;
+  bottom: 15%;
+  left: 10%;
+  z-index: 1000;
+  color: $orange-light;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 65rem;
+  height: 15rem;
+
+  background: rgba(2, 2, 2, 0.5);
+  border-radius: 0.5rem;
+
+  span:first-child {
+    font-size: $big;
+    font-weight: 700;
+    padding: 1.5rem 0 1.5rem 1.5rem;
+  }
+
+  span:last-child {
+    font-size: $xsmall;
+    color: $orange-dark;
+    padding: 0 0 1.5rem 1.5rem;
+  }
+}
+
+.arrow-down {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  z-index: 1000;
+
+  img {
+    height: 4rem;
+    width: 4rem;
+  }
+  animation: upDown 800ms infinite ease;
+}
+
+@keyframes upDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}

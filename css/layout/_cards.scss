@@ -1,0 +1,145 @@
+.section-games {
+  .title {
+    color: $white;
+  }
+}
+
+.container-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+.card {
+  position: relative;
+  width: 55rem;
+  height: 30rem;
+  margin: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.card img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateX(70%);
+  height: 35rem;
+  transition: cubic-bezier(0.72, 0.34, 0, 1.59) 800ms;
+}
+
+.card:first-child {
+  background: linear-gradient(135deg, #d4d4d4, #222 50%, #000 100%);
+}
+
+.card ~ .card {
+  background: linear-gradient(135deg, #91e1ed, #175773);
+}
+
+.card ~ .card ~ .card {
+  background: linear-gradient(135deg, #edc345, #e88e35, #261503);
+}
+
+.card:hover img {
+  transform: translateX(125%);
+}
+
+.card ~ .card ~ .card:hover img {
+  transform: translateX(115%);
+}
+
+.card .content {
+  position: relative;
+  width: 50%;
+  left: 20%;
+  padding: 2rem 2rem 2rem 4rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: cubic-bezier(0.45, 0.11, 0, 1.59) 800ms;
+}
+
+.card:hover .content {
+  opacity: 1;
+  visibility: visible;
+  left: 0%;
+}
+
+.card .content h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: $medium;
+  font-weight: 700;
+  line-height: 2.4rem;
+  letter-spacing: 0.2rem;
+}
+
+.card .content p {
+  color: #fff;
+  margin-top: 1.5rem;
+  font-size: $small;
+}
+
+.card .content a {
+  position: relative;
+  display: inline-block;
+
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+
+  text-decoration: none;
+  font-size: $small;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.card:first-child .content a {
+  background: $white;
+  color: $black;
+}
+
+.card:nth-child(2) .content a {
+  background: #91e1ed;
+  color: $black;
+}
+
+.card:last-child .content a {
+  background: #261503;
+  color: $white;
+}
+
+@media (max-width: 991px) {
+  .card {
+    position: relative;
+    width: auto;
+    max-width: 60rem;
+    transition: 0.5s;
+    align-items: flex-start;
+  }
+  .card:hover {
+    height: 60rem;
+  }
+  .card:hover img {
+    left: 50%;
+    height: 35rem;
+  }
+  .card .content {
+    width: 100%;
+    left: 0;
+    padding: 4rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .card .content {
+    padding: 3rem;
+  }
+  .card:hover img {
+    height: 30rem;
+  }
+}

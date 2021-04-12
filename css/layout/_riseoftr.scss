@@ -1,0 +1,61 @@
+.section-riseoftombraider {
+    height: 100vh;
+    background: linear-gradient(135deg, #ebebeb, #175773);
+    padding-top: 6rem;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  
+    .content {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20rem;
+  
+      .container-title {
+        margin-bottom: 4rem;
+
+        h1 {
+          font-size: $big;
+          letter-spacing: 0.2rem;
+          font-weight: 800;
+          color: $black-dark;
+        }
+  
+        p {
+          font-size: $xsmall;
+          margin-top: 1rem;
+          color: $black;
+        }
+      }
+  
+      .container-story {
+        max-width: 50rem;
+  
+        p {
+          margin-top: 1.5rem;
+          font-size: $xsmall;
+          line-height: 1.6;
+          color: $black-dark;
+        }
+      }
+  
+      .container-platforms {
+        margin-top: 3.5rem;
+  
+        img {
+          width: 50px;
+          height: 50px;
+          margin: 0 1rem 1rem 0;
+  
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+  

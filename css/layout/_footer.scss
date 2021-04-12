@@ -1,0 +1,17 @@
+.footer {
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    span p {
+        font-size: $xsmall;
+        color: $white-orange;
+        letter-spacing: 0.1rem;
+
+        a {
+            color: $orange-dark;
+            font-weight: 800;
+            letter-spacing: 0.2rem;
+        }
+    }
+}

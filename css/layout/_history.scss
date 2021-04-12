@@ -1,0 +1,39 @@
+.section-history {
+  background: $white-orange;
+  height: 100vh;
+}
+
+.title {
+  font-size: $big;
+  color: $black;
+  text-align: center;
+  padding-top: 6rem;
+  letter-spacing: 0.4rem;
+}
+
+.container-history {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &--content {
+    max-width: 45rem;
+
+    p {
+      font-size: $xsmall;
+      letter-spacing: 0.1rem;
+      line-height: 1.5;
+
+      &:not(:first-child) {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+
+  &--img {
+    margin-top: -10rem;
+    margin-left: 6rem;
+    filter: drop-shadow(5px 5px 5px);
+  }
+}
